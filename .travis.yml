@@ -8,3 +8,15 @@ before_install:
 script:
   - docker run -e CI=true jsaurabh/udemy-react npm run test
   
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "udemy-docker"
+  env: "UdemyDocker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-239175025842"
+  on:
+    branch: master
+  access_key_id:
+    secure: "$access"
+  secret_access_key:
+    secure: "$secret"
