@@ -6,4 +6,5 @@ before_install:
   - docker build -t jsaurabh/udemy-react -f Dockerfile.dev .
   
 script:
-  - docker run jsaurabh/udemy-react npm run test -- --coverage
+  - docker run jsaurabh/udemy-react npm run test -- --coveragegit 
+  
